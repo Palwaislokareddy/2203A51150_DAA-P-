@@ -1,13 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h> 
-void ascending(int arr[], int n) 
+#include<stdio.h>
+#include<stdlib.h> 
+void ascending(int arr[],int n) 
 {
-    int i, j, key;
-    for (i = 1; i <n ; i++) 
+    int i,j,key;
+    for(i=1;i<n;i++) 
 	{
-        key = arr[i];
-        j = i - 1;
-        while (j>=0 && arr[j]>key)
+        key=arr[i];
+        j=i-1;
+        while(j>=0 && arr[j]>key)
 		{
             arr[j+1]=arr[j];
             j=j-1;
@@ -15,14 +15,14 @@ void ascending(int arr[], int n)
         arr[j+1]=key;
     }
 }
-void descending(int arr[], int n) 
+void descending(int arr[],int n) 
 {
-    int i, j, key;
+    int i,j,key;
     for (i=1;i<n;i++) 
 	{
-        key = arr[i];
-        j = i - 1;
-        while (j>=0 && arr[j]<key)
+        key=arr[i];
+        j=i-1;
+        while(j>=0 && arr[j]<key)
 		{
             arr[j+1]=arr[j];
             j=j-1;
@@ -36,7 +36,7 @@ int main()
     int i,n;
     char choice;
     printf("Enter size: ");
-    scanf("%d", &n);
+    scanf("%d",&n);
     a=(int*)malloc(n*sizeof(int));
     printf("Enter elements:\n");
     for (i=0;i<n;i++) 
@@ -45,7 +45,7 @@ int main()
     }
     printf("Select a/d for sorting: ");
     scanf(" %c",&choice);
-    if (choice == 'a') 
+    if (choice=='a') 
 	{
         ascending(a,n);
     } 
